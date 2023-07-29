@@ -8,46 +8,51 @@
 <body>
 
     <p>
-        <button  onclick=" console.log(calculate = calculate +=1)">1</button>
+        <button  onclick=" (calculate = calculate +=`1`); console.log(calculate)">1</button>
       
       
-          <button onclick="console.log(calculate = calculate +=2)">2</button>
+          <button onclick="(calculate = calculate +=`2`); console.log(calculate)">2</button>
     </p>
    
 
 
-<p>
-    <button  onclick="
-    console.log(calculate = calculate +=3)  
+     <p>
+         <button  onclick="(calculate = calculate +=`3`); console.log(calculate)">3</button>
 
+        <button  onclick="(calculate = calculate +=`4`); console.log(calculate)">4</button>
 
-    ">3</button>
+     </p>
+        
+    <p>
+         <button  onclick=" (calculate = calculate +=`5`); console.log(calculate)">5</button>  
 
+         <button  onclick=" (calculate = calculate +=`6`); console.log(calculate)">6</button>  
+     </p>
+    
 
-    <button  onclick="
-    console.log(calculate = calculate +=4)">4</button>
+     <p>
+        <button  onclick=" (calculate = calculate +=`7`); console.log(calculate)">7</button>  
 
-</p>
-  
+        <button  onclick=" (calculate = calculate +=`8`); console.log(calculate)">8</button>  
+    </p>
 
+    <p>
 
-    <button  onclick="
-    console.log(calculate = calculate +=6)  
+        <button  onclick="(calculate = calculate +=`9`); console.log(calculate)">9</button>  
 
+        <button  onclick="(calculate = calculate +=` + `); console.log(calculate)">+</button>
 
-    ">6</button>
-    <button  onclick="
+        
+    </p>
+   
 
-    console.log(calculate = calculate +=` + `)  
-
-
-    ">+</button>
-
-    <button onclick="console.log(eval(calculate))">=</button>
+    <button onclick="calculate = (eval(calculate)); console.log(calculate)">=</button>
+    
  
     <script>
 
         let calculate = ``;
+        
     </script>
 </body>
 </html
