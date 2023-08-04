@@ -150,10 +150,9 @@
             
         }else if( cn == `+`){
             calculate = calculate += ` + `
-           /
+           
             /*However, I noticed a small potential issue with the addition operation when using the + button. 
-            Since the + symbol is used for both addition and string concatenation, 
-            it might lead to unexpected results when performing arithmetic calculations.
+            Since the + symbol is used for both addition and string concatenation, it might lead to unexpected results when performing arithmetic calculations.
 
             To handle this, you can add a separate case for the addition operation, so it performs numeric addition. Also, you can remove the unnecessary concatenation of spaces when handling the + operator. Here's the updated version of the code:
             function operation(cn) {
