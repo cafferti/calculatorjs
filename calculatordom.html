@@ -5,10 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body button{
+            border: none;
+            padding: 1rem;
+            border-radius: 3rem;
+            background-color:grey;
+            color: white;
+            font-size: 20px;
+        }
+
+        .sign{
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
-    
-     <p style="border: solid black; width: 6rem;padding-block: 1rem; text-align: center; font-size: 20px;" class="js-display" ></p>
+
+     <p style="padding-block: 1rem; text-align: left; font-size: 30px; padding-inline: 50px; padding-left: 0px;" class="js-display" ></p>
 
 
     <p>
@@ -16,47 +31,58 @@
       
       
           <button onclick="   operation(`2`); ">2</button>
-    </p>
+    
    
-
-
-     <p>
          <button  onclick="  operation(`3`);">3</button>
 
-        <button  onclick="  operation(`4`);">4</button>
+         <button  class="sign" onclick=" operation(`+`);">+</button>
+    </p>
+       
 
-     </p>
+     
         
     <p>
          <button  onclick="   operation(`5`);">5</button>  
 
          <button  onclick="  operation(`6`);">6</button>  
-     </p>
-    
+
+         <button  onclick="  operation(`4`);">4</button>
+
+         <button class="sign" onclick="  operation(`-`)">-</button>
+     
+    </p>
 
      <p>
         <button  onclick="   operation(`7`);">7</button>  
 
         <button  onclick="   operation(`8`);">8</button>  
+
+        <button  onclick=" operation(`9`);">9</button>  
+
+        <button  class="sign" onclick="operation(`*`)" >*</button>
     </p>
 
     <p>
 
-        <button  onclick=" operation(`9`);">9</button>  
+        <button onclick="operation(`0`)" >0</button> 
 
-        <button  onclick=" operation(`+`);">+</button>
+        <button onclick="operation(`.`)" >.</button>
+
+        <button onclick=" cn= `=`; operation(`=`);  ">=</button>
+
+        <button  class="sign" onclick=" cn= `/`; operation(`/`);  ">/</button>
 
         
     </p>
    
 
-    <button onclick=" cn= `=`; operation(`=`);  ">=</button>
+   
 
     <button onclick=" operation(`clear`)">clear</button>
     
  
     <script>
-
+       
        let calculate = JSON.parse(localStorage.getItem('calculate'))
 
 
@@ -96,7 +122,18 @@
             calculate = calculate += ` + `
           
             
-        }else if( cn == `=`){
+        }else if(cn === `-`){
+            calculate = calculate += ` - `
+        }else if(cn === `*`){
+            calculate = calculate += ` * `
+
+        }else if(cn === `.`){
+            calculate = calculate+= `.`
+        }
+        else if(cn === `/`){
+            calculate = calculate += ` / `
+        }
+        else if( cn == `=`){
             calculate = (eval(calculate))
         }else if(cn === `clear`){
             calculate = ``
